@@ -1,0 +1,1 @@
+[{"domain": "localhost", "httpOnly": true, "name": "JSESSIONID.ea29d6aa", "path": "/", "secure": false, "value": "node0oezpqwrx7el41urmtvr7mp2m53.node0"}, {"domain": "localhost", "httpOnly": false, "name": "screenResolution", "path": "/", "secure": false, "value": "1536x864"}]

@@ -1,0 +1,316 @@
+[2022-05-31 21:56:49.298733+08:00]login username=admin
+[2022-05-31 21:56:49.370748+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/crumbIssuer/api/json/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/crumbIssuer/api/json/
+Date: Tue, 31 May 2022 13:56:49 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: a05f1402
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 134
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.security.csrf.DefaultCrumbIssuer","crumb":"df4d7e0e3034bf645ab03454829597fc","crumbRequestField":"Jenkins-Crumb"}
+---------------- end ----------------
+
+[2022-05-31 21:56:49.379869+08:00]login -> <__main__.Jenkins object at 0x00000214375234A8>
+[2022-05-31 21:56:49.449894+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/api/json?tree=jobs%5Bname%5D
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/api/json?tree=jobs%5Bname%5D
+Date: Tue, 31 May 2022 13:56:49 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: a05f1402
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 57
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.Hudson","jobs":[]}
+---------------- end ----------------
+
+[2022-05-31 21:56:49.515911+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/user/admin/api/json/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/user/admin/api/json/
+Date: Tue, 31 May 2022 13:56:49 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: a05f1402
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 421
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.User","absoluteUrl":"http://localhost:8080/user/admin","description":null,"fullName":"admin","id":"admin","property":[{"_class":"jenkins.security.ApiTokenProperty"},{"_class":"hudson.model.MyViewsProperty"},{"_class":"hudson.model.PaneStatusProperties"},{"_class":"jenkins.security.seed.UserSeedProperty"},{"_class":"hudson.search.UserSearchProperty","insensitiveSearch":true},{"_class":"hudson.security.HudsonPrivateSecurityRealm$Details"},{"_class":"jenkins.security.LastGrantedAuthoritiesProperty"},{"_class":"io.jenkins.plugins.localization_zh_cn.UserCommunityProperty"},{"_class":"hudson.tasks.Mailer$UserProperty","address":null},{"_class":"hudson.plugins.emailext.watching.EmailExtWatchAction$UserProperty","triggers":[]},{"_class":"org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty"},{"_class":"com.cloudbees.plugins.credentials.UserCredentialsProvider$UserCredentialsProperty"}]}
+---------------- end ----------------
+
+[2022-05-31 21:56:49.584919+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/asynchPeople/api/json
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/asynchPeople/api/json
+Date: Tue, 31 May 2022 13:56:49 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: a05f1402
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 169
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.View$AsynchPeople$People","users":[{"lastChange":null,"project":null,"user":{"absoluteUrl":"http://localhost:8080/user/admin","fullName":"admin"}},{"lastChange":null,"project":null,"user":{"absoluteUrl":"http://localhost:8080/user/test","fullName":"test"}}]}
+---------------- end ----------------
+
+[2022-05-31 21:56:49.585920+08:00]get_all_usernames -> ['admin', 'test']
+[2022-05-31 21:56:49.654627+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/api/json?tree=jobs%5Bname%5D
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/api/json?tree=jobs%5Bname%5D
+Date: Tue, 31 May 2022 13:56:49 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: a05f1402
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 57
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.Hudson","jobs":[]}
+---------------- end ----------------
+
+[2022-05-31 21:56:49.655627+08:00]get_all_job_name -> []
+[2022-05-31 21:56:49.655627+08:00]delete_all_jobs -> True£º[] all deleted
+[2022-05-31 21:56:49.723646+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/job/xxjob/api/json
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+404 Not Found http://127.0.0.1:8080/job/xxjob/api/json
+Date: Tue, 31 May 2022 13:56:49 GMT
+X-Content-Type-Options: nosniff
+Cache-Control: must-revalidate,no-cache,no-store
+Content-Type: text/html;charset=iso-8859-1
+Content-Length: 333
+Server: Jetty(9.4.z-SNAPSHOT)
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /job/xxjob/api/json. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+
+---------------- end ----------------
+
+[2022-05-31 21:56:50.073368+08:00]
+---------------- request ----------------
+POST http://127.0.0.1:8080/scriptText/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Content-Length: 702
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YWRtaW46YWRtaW4=
+
+script=def+jobDSL%3D%22%22%22properties%28%5Bparameters%28%5Bstring%28name%3A+%27Run%27%2C+defaultValue%3A+%27Yes%27%2C+description%3A+%27a+parameter%27%29%5D%29%5D%29node+%7Bstage%28%22test%22%29%7Becho+%27Hello+World%27%7D%7D%22%22%22%3B%0A%0A+++++++++++++++++++++++def+flowDefinition+%3D+new+org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition%28jobDSL%2C+true%29%3B%0A+++++++++++++++++++++++def+parent+%3D+Jenkins.instance%3B%0A+++++++++++++++++++++++def+job+%3D+new+org.jenkinsci.plugins.workflow.job.WorkflowJob%28parent%2C+%22xxjob%22%29%0A+++++++++++++++++++++++job.definition+%3D+flowDefinition%0A+++++++++++++++++++++++job.save%28%29%3B%0A+++++++++++++++++++++++Jenkins.instance.reload%28%29
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/scriptText/
+Date: Tue, 31 May 2022 13:56:49 GMT
+X-Content-Type-Options: nosniff
+Content-Type: text/plain;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 20
+Server: Jetty(9.4.z-SNAPSHOT)
+
+
+---------------- end ----------------
+
+[2022-05-31 21:56:50.141386+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/job/xxjob/api/json
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/job/xxjob/api/json
+Date: Tue, 31 May 2022 13:56:50 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: a05f1402
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 361
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"org.jenkinsci.plugins.workflow.job.WorkflowJob","actions":[{},{},{},{},{},{"_class":"com.cloudbees.plugins.credentials.ViewCredentialsAction"}],"description":null,"displayName":"xxjob","displayNameOrNull":null,"fullDisplayName":"xxjob","fullName":"xxjob","name":"xxjob","url":"http://localhost:8080/job/xxjob/","buildable":true,"builds":[],"color":"notbuilt","firstBuild":null,"healthReport":[],"inQueue":false,"keepDependencies":false,"lastBuild":null,"lastCompletedBuild":null,"lastFailedBuild":null,"lastStableBuild":null,"lastSuccessfulBuild":null,"lastUnstableBuild":null,"lastUnsuccessfulBuild":null,"nextBuildNumber":1,"property":[],"queueItem":null,"concurrentBuild":true,"resumeBlocked":false}
+---------------- end ----------------
+
+[2022-05-31 21:56:50.142381+08:00]create_job_with_dsl -> True£ºJob Created at http://localhost:8080/job/xxjob/
+[2022-05-31 21:56:50.210398+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/job/xxjob/api/json
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/job/xxjob/api/json
+Date: Tue, 31 May 2022 13:56:50 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: a05f1402
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 361
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"org.jenkinsci.plugins.workflow.job.WorkflowJob","actions":[{},{},{},{},{},{"_class":"com.cloudbees.plugins.credentials.ViewCredentialsAction"}],"description":null,"displayName":"xxjob","displayNameOrNull":null,"fullDisplayName":"xxjob","fullName":"xxjob","name":"xxjob","url":"http://localhost:8080/job/xxjob/","buildable":true,"builds":[],"color":"notbuilt","firstBuild":null,"healthReport":[],"inQueue":false,"keepDependencies":false,"lastBuild":null,"lastCompletedBuild":null,"lastFailedBuild":null,"lastStableBuild":null,"lastSuccessfulBuild":null,"lastUnstableBuild":null,"lastUnsuccessfulBuild":null,"nextBuildNumber":1,"property":[],"queueItem":null,"concurrentBuild":true,"resumeBlocked":false}
+---------------- end ----------------
+
+[2022-05-31 21:56:50.211397+08:00]create_job_with_dsl -> False£ºJob Aready Exist
+[2022-05-31 21:56:50.278410+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/api/json?tree=jobs%5Bname%5D
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/api/json?tree=jobs%5Bname%5D
+Date: Tue, 31 May 2022 13:56:50 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: a05f1402
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 113
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.Hudson","jobs":[{"_class":"org.jenkinsci.plugins.workflow.job.WorkflowJob","name":"xxjob"}]}
+---------------- end ----------------
+
+[2022-05-31 21:56:50.278410+08:00]get_all_job_name -> ['xxjob']
+[2022-05-31 21:56:50.369259+08:00]
+---------------- request ----------------
+POST http://127.0.0.1:8080/job/xxjob/doDelete
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Content-Length: 0
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+302 Found http://127.0.0.1:8080/job/xxjob/doDelete
+Date: Tue, 31 May 2022 13:56:50 GMT
+X-Content-Type-Options: nosniff
+Location: http://127.0.0.1:8080/
+Content-Length: 0
+Server: Jetty(9.4.z-SNAPSHOT)
+
+
+---------------- end ----------------
+
+[2022-05-31 21:56:50.369259+08:00]delete_all_jobs -> True£º['xxjob'] all deleted
+[2022-05-31 21:56:50.439275+08:00]
+---------------- request ----------------
+GET http://127.0.0.1:8080/asynchPeople/api/json
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: df4d7e0e3034bf645ab03454829597fc
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://127.0.0.1:8080/asynchPeople/api/json
+Date: Tue, 31 May 2022 13:56:50 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: a05f1402
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 169
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.View$AsynchPeople$People","users":[{"lastChange":null,"project":null,"user":{"absoluteUrl":"http://localhost:8080/user/admin","fullName":"admin"}},{"lastChange":null,"project":null,"user":{"absoluteUrl":"http://localhost:8080/user/test","fullName":"test"}}]}
+---------------- end ----------------
+
+[2022-05-31 21:56:50.440275+08:00]get_all_usernames -> ['admin', 'test']
