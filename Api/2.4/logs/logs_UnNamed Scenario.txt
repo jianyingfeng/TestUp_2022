@@ -1,0 +1,182 @@
+[2022-06-19 10:08:21.823984+08:00]login username=admin
+[2022-06-19 10:08:21.944006+08:00]
+---------------- request ----------------
+GET http://localhost:8080/crumbIssuer/api/json/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://localhost:8080/crumbIssuer/api/json/
+Date: Sun, 19 Jun 2022 02:08:21 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: 24d8d13c
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 133
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.security.csrf.DefaultCrumbIssuer","crumb":"e9d1e22391bf9e952501f1d14a79af06","crumbRequestField":"Jenkins-Crumb"}
+---------------- end ----------------
+
+[2022-06-19 10:08:21.955498+08:00]login -> <libs.jenkins.Jenkins object at 0x00000243153955C0>
+[2022-06-19 10:08:22.063548+08:00]
+---------------- request ----------------
+GET http://localhost:8080/user/test/api/json/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: e9d1e22391bf9e952501f1d14a79af06
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://localhost:8080/user/test/api/json/
+Date: Sun, 19 Jun 2022 02:08:21 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: 24d8d13c
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 435
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.User","absoluteUrl":"http://localhost:8080/user/test","description":null,"fullName":"test","id":"test","property":[{"_class":"jenkins.security.ApiTokenProperty"},{"_class":"io.jenkins.plugins.localization_zh_cn.UserCommunityProperty"},{"_class":"hudson.plugins.emailext.watching.EmailExtWatchAction$UserProperty","triggers":[]},{"_class":"hudson.model.MyViewsProperty"},{"_class":"org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty"},{"_class":"hudson.model.PaneStatusProperties"},{"_class":"jenkins.security.seed.UserSeedProperty"},{"_class":"hudson.search.UserSearchProperty","insensitiveSearch":true},{"_class":"com.cloudbees.plugins.credentials.UserCredentialsProvider$UserCredentialsProperty"},{"_class":"hudson.security.HudsonPrivateSecurityRealm$Details"},{"_class":"hudson.tasks.Mailer$UserProperty","address":"test@notexist.com"},{"_class":"jenkins.security.LastGrantedAuthoritiesProperty"}]}
+---------------- end ----------------
+
+[2022-06-19 10:08:22.071534+08:00]login username=admin
+[2022-06-19 10:08:22.187567+08:00]
+---------------- request ----------------
+GET http://localhost:8080/crumbIssuer/api/json/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://localhost:8080/crumbIssuer/api/json/
+Date: Sun, 19 Jun 2022 02:08:22 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: 24d8d13c
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 133
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.security.csrf.DefaultCrumbIssuer","crumb":"e9d1e22391bf9e952501f1d14a79af06","crumbRequestField":"Jenkins-Crumb"}
+---------------- end ----------------
+
+[2022-06-19 10:08:22.187567+08:00]login -> <libs.jenkins.Jenkins object at 0x00000243155A8240>
+[2022-06-19 10:08:22.295605+08:00]
+---------------- request ----------------
+GET http://localhost:8080/user/admin/api/json/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Jenkins-Crumb: e9d1e22391bf9e952501f1d14a79af06
+Authorization: Basic YWRtaW46YWRtaW4=
+
+
+---------------- response ----------------
+200 OK http://localhost:8080/user/admin/api/json/
+Date: Sun, 19 Jun 2022 02:08:22 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: 24d8d13c
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 421
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.User","absoluteUrl":"http://localhost:8080/user/admin","description":null,"fullName":"admin","id":"admin","property":[{"_class":"jenkins.security.ApiTokenProperty"},{"_class":"hudson.model.MyViewsProperty"},{"_class":"hudson.model.PaneStatusProperties"},{"_class":"jenkins.security.seed.UserSeedProperty"},{"_class":"hudson.search.UserSearchProperty","insensitiveSearch":true},{"_class":"hudson.security.HudsonPrivateSecurityRealm$Details"},{"_class":"jenkins.security.LastGrantedAuthoritiesProperty"},{"_class":"io.jenkins.plugins.localization_zh_cn.UserCommunityProperty"},{"_class":"hudson.tasks.Mailer$UserProperty","address":null},{"_class":"hudson.plugins.emailext.watching.EmailExtWatchAction$UserProperty","triggers":[]},{"_class":"org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty"},{"_class":"com.cloudbees.plugins.credentials.UserCredentialsProvider$UserCredentialsProperty"}]}
+---------------- end ----------------
+
+[2022-06-19 10:08:22.311599+08:00]
+---------------- request ----------------
+GET http://localhost:8080/user/test/api/json/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+
+---------------- response ----------------
+200 OK http://localhost:8080/user/test/api/json/
+Date: Sun, 19 Jun 2022 02:08:22 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: 24d8d13c
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 132
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.User","absoluteUrl":"http://localhost:8080/user/test","description":null,"fullName":"test","id":"test","property":[]}
+---------------- end ----------------
+
+[2022-06-19 10:08:22.331606+08:00]
+---------------- request ----------------
+GET http://localhost:8080/user/notxx/api/json/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+
+---------------- response ----------------
+404 Not Found http://localhost:8080/user/notxx/api/json/
+Date: Sun, 19 Jun 2022 02:08:22 GMT
+X-Content-Type-Options: nosniff
+Cache-Control: must-revalidate,no-cache,no-store
+Content-Type: text/html;charset=iso-8859-1
+Content-Length: 335
+Server: Jetty(9.4.z-SNAPSHOT)
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /user/notxx/api/json/. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+
+---------------- end ----------------
+
+[2022-06-19 10:08:22.331606+08:00]断言失败，absoluteUrl的预期值：http://localhost:8080/user/notxx，实际值：
+[2022-06-19 10:08:22.331606+08:00]断言失败，fullName：notxx，实际值：
+[2022-06-19 10:08:22.351616+08:00]
+---------------- request ----------------
+GET http://localhost:8080/user/admin/api/json/
+User-Agent: python-requests/2.24.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+
+
+---------------- response ----------------
+200 OK http://localhost:8080/user/admin/api/json/
+Date: Sun, 19 Jun 2022 02:08:22 GMT
+X-Content-Type-Options: nosniff
+X-Jenkins: 2.189
+X-Jenkins-Session: 24d8d13c
+Content-Type: application/json;charset=utf-8
+Content-Encoding: gzip
+Content-Length: 134
+Server: Jetty(9.4.z-SNAPSHOT)
+
+{"_class":"hudson.model.User","absoluteUrl":"http://localhost:8080/user/admin","description":null,"fullName":"admin","id":"admin","property":[]}
+---------------- end ----------------
+
