@@ -93,8 +93,12 @@ class Response:
         # logger.info("{res.status_code} {res.text}".format(res=response))
         # textwrap.dedent可以将多段文本左对齐输出
         req = response.request
+        # 请求头不一定非得格式化
+        # req_headers = response.request.headers
         req_headers = format_headers(response.request.headers)
         res = response
+        # 响应头不一定非得格式化
+        # res_headers = response.headers
         res_headers = format_headers(response.headers)
         logger.debug(f'''
 ---------------- request ----------------

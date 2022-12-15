@@ -79,16 +79,16 @@ class JenkinsOperation:
 if __name__ == '__main__':
     # 创建Jenkins类的一个实例
     # 调用方式一：
-    # amo = Jenkins('http://localhost:8080')
-    # operation = JenkinsOperation(amo)
-    # r = operation.get_all_job_name()
-    # print(r)
-    # r = operation.get_all_job_name_with_url()
-    # print(r)
+    amo = Jenkins('http://localhost:8080')
+    operation = JenkinsOperation(amo)
+    r = operation.get_all_job_name()
+    print(r)
+    r = operation.get_all_job_name_with_url()
+    print(r)
 
     # 调用方式二：
-    amo = Jenkins('http://localhost:8080')
-    r = amo.use_jenkins.get_all_job_name()
-    print(r)
-    r = amo.use_jenkins.get_all_job_name_with_url()
-    print(r)
+    # amo = Jenkins('http://localhost:8080')
+    # r = amo.use_jenkins.get_all_job_name()
+    # print(r)
+    # r = amo.use_jenkins.get_all_job_name_with_url()
+    # print(r)
