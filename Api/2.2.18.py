@@ -25,6 +25,7 @@ def log(fun):
     def inner(*args, **kwargs):
         r = fun(*args, **kwargs)
         logger.info(f"{fun.__name__} -> {r}")
+        # 这里需要返回，不返回被装饰的函数，也不会有返回值，即为None
         return r
     return inner
 
