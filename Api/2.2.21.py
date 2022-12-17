@@ -288,7 +288,11 @@ class JenkinsJobOperation(Operation, JenkinsJobApi):
                        job.definition = flowDefinition
                        job.save();
                        Jenkins.instance.reload()"""
-        r = self.run_groovy(script)
+        # JenkinsJobOperation类中没有run_groovy这个方法，例子是Leaf、Root类
+        # 因为类的继承关系，子类继承父类的所有方法，所以子类的实例可以调用父类的方法
+        # 因为子类的实例调用父类的方法时，可以视作把整个方法定义代码复制到子类中来。于是父类的方法也可以
+        # 直接访问子类的成员变量了
+        self.run_groovy(script)
         r = self.get_job(job_name)
         if r.code == 200 and r.body.get('displayName') == job_name:
             result.success = True
@@ -298,6 +302,17 @@ class JenkinsJobOperation(Operation, JenkinsJobApi):
             result.success = False
             result.info = f"Job Created failed!"
             return result
+
+
+# 举得例子
+class Leaf:
+    def hello(self):
+        print(f'我叫{self.name}')
+
+
+class Root(Leaf):
+    def __init__(self, name):
+        self.name = name
 
 
 # 用户接口
